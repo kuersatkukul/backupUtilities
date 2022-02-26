@@ -13,17 +13,30 @@
 # there is the need for bibtex-extra seperately
 
 # Check if given location can be used to install default latex document
-if mkdir $1; then
-	echo "Location is suitable for installation"
-	rm -rf $1 > /dev/null
+saveLocation="$1"
+if [[ -d $saveLocation ]]; then
+	echo "$saveLocation exists and is being used as Location..."
 else
-	echo "Choose another path. Exiting..."
-	exit -1
+	if mkdir $saveLocation
+	then
+		echo "Created Location $saveLocation"
+	else
+		echo "Path invalid. Choose another path. Exiting..."
+		exit -1
+	fi
 fi
 
 # Install LaTeX and TeXMaker
-sudo apt install texmaker texlive-bibtex-extra texlive-lang-german -y
+#sudo apt install texmaker texlive-bibtex-extra texlive-lang-german -y
+
 
 # Copy content to location wanted
-cp graphics $1/defaultLatexSetup
-cp latex $1/defaultLatexSetup
+if [ ${saveLocation: -1} == "/" ]; then
+	mkdir ${saveLocation}defaultLatexSetup 
+	cp -r graphics/ ${saveLocation}defaultLatexSetup -v
+	cp -r latex/ ${saveLocation}defaultLatexSetup -v
+else
+	mkdir ${saveLocation}/defaultLatexSetup 
+	cp -r latex/ $saveLocation/defaultLatexSetup -v
+	cp -r graphics/ $saveLocation/defaultLatexSetup -v
+fi
