@@ -1,5 +1,4 @@
 - 👋 Hi, I’m @kuersatkukul
-- 👀 I’m interested in C++
-- 💞️ I’m looking to collaborate on C++ Projects
-- 💻 I ve got 2 years of C++ experience in real life projects
+- 👀 I’m interested in Automation, Programming and Games
+- I can work with C++, Bash, Powershell, Batch etc.
 - 📫 How to reach me kuersat.kukul97@gmail.com
