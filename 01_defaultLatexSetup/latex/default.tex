@@ -1,0 +1,63 @@
+
+\documentclass{article} 
+
+\include{preamble} % alle Pakete und Einstellungen
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+\section{Einleitung} \label{chap:einl}
+Kapitel~\ref{chap:einl} behandelt kurz die wichtigsten Funktionalitäten um ein ordentliches Dokument auzusetzen.
+Listing~\ref{lst:main} zeigt ein kurzes Listing mit einer C/C++ Main-Funktion
+
+\begin{lstlisting}[caption=C/C++ Main-Funktion, captionpos=b, label=lst:main]
+int main()
+{
+	return 0;
+}
+\end{lstlisting}
+
+Abbildung~\ref{fig:defaultgrafik} zeigt zwei Smileyfaces mit einem Beispieltext. Es sollten \hl{immer Pdf Dateien} zur Einbidung genutzt werden, da nur so kein Informationsverlust stattfindet.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{../graphics/defaultgraphic-crop} % pdflatex ohne Endung
+\caption{Die wunderbare Default Grafik (kleine Version)}
+\label{fig:defaultgrafik}
+\end{figure}
+
+\section{Zitate}
+Marcus Schulz hat ein hervorragendes Buch für das CI/CD Tools \textit{Jenkins} geschrieben. Es nennt sich \textit{Continuous Integration mit Jenkins}~\cite{Schulz} und wird über der Rheinwerk Verlag veröffentlicht.
+Eine weitere gute Ressource ist die Online-Dokumentation~\cite{Jenkins} von \textit{Jenkins}. Diese ist sehr ausführlich und bietet für jede Frage zu spezifische Antworten.
+
+Tabelle~\ref{tab:tabelle} stellt eine Tabelle dar, die mit LibreOffice erstellt wurde.
+
+\begin{table}[H]
+\centering
+\includegraphics[scale=0.9]{../graphics/table-crop} % pdflatex ohne Endung
+\caption{Eine Tabelle mit zwei Zeilen und zwei Spalten}
+\label{tab:tabelle}
+\end{table}
+
+\newpage
+\listoffigures % Liste der Abbildungen 
+\listoftables % Liste der Tabellen
+\lstlistoflistings % Liste der Listings
+
+\bibliographystyle{plain} % Literaturverzeichnis
+\begin{btSect}{physicalsources} % mit bibtopic Quellen trennen
+\section*{Literaturverzeichnis}
+\btPrintCited
+\end{btSect}
+\begin{btSect}{onlinesources}
+\section*{Online-Quellen}
+\btPrintCited
+\end{btSect}
+
+% dann mit "bibtex thesis1" und "bibtex thesis2" arbeiten
+
+\end{document}
+;;; Local Variables:
+;;; ispell-local-dictionary: "de_DE-neu"
+;;; End:
