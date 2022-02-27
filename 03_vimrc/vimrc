@@ -60,10 +60,11 @@ highlight LineNr ctermfg=darkcyan
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-set laststatus=2
-" Statusline
+# Some color scheme
 hi User1 ctermbg=darkgrey ctermfg=white
 
+" Statusline
+set laststatus=2
 set statusline+=%1*
 set statusline+=\ [%F]
 set statusline+=\ \ \ [Type:%{&filetype!=#''?&filetype:'none'}]
