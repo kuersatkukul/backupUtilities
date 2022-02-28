@@ -9,3 +9,6 @@ vim -S <sessionname(optional if in same folder and unique)>
 
 # Custom statusline
 set statusline+= <options>
+
+# To add a colorscheme it needs to be in /colors folder
+# e.g in /usr/share/vim/vim81/colors or ~/.vim/colors
