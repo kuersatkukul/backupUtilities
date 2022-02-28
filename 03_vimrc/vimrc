@@ -21,9 +21,9 @@ runtime! debian.vim
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
-if has("syntax")
-  syntax on
-endif
+"if has("syntax")
+"  syntax on
+"endif
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
@@ -60,13 +60,16 @@ highlight LineNr ctermfg=darkcyan
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-# Some color scheme
+set laststatus=2
+" Statusline
 hi User1 ctermbg=darkgrey ctermfg=white
 
-" Statusline
-set laststatus=2
 set statusline+=%1*
 set statusline+=\ [%F]
 set statusline+=\ \ \ [Type:%{&filetype!=#''?&filetype:'none'}]
 set statusline+=\ \ \ [%l/%c]
 set statusline+=\ \ \ %{&modified?'[+]':''}
+
+
+"Gruvbox colorscheme
+colorscheme gruvbox
