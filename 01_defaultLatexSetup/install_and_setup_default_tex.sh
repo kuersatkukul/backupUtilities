@@ -27,7 +27,7 @@ else
 fi
 
 # Install LaTeX and TeXMaker
-#sudo apt install texmaker texlive-bibtex-extra texlive-lang-german -y
+sudo apt install texmaker texlive-bibtex-extra texlive-lang-german -y
 
 
 # Copy content to location wanted
