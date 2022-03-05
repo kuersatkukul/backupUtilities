@@ -21,6 +21,17 @@ fi
 cp ./conkystart.sh "$HOME/.conky/"
 cp ./conkyconfig "$HOME/.conky/"
 
+# Write .desktop File (this is done because we actually need the path for Exec as
+# as an absolute path $HOME does not work with autostart programs
+echo "#programs which are started on bootup" > .desktop
+echo "[Desktop Entry]" >> .desktop
+echo "Type=Application" >> .desktop
+echo "Exec=sh $HOME/.conky/conkystart.sh" >> .desktop
+echo "Hidden=false" >> .desktop
+echo "NoDisplay=false" >> .desktop
+echo "X-GNOME-Autostart-enabled=true" >> .desktop
+echo "Name=Conky Autostart" >> .desktop
+
 # in ~/.config/autostart are programs listed for automatic start on bootup
 cp ./.desktop $HOME/.config/autostart
 sh $HOME/.conky/conkystart.sh

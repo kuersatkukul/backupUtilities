@@ -1,8 +1,7 @@
-# programs which are started on startup
-
+#programs which are started on bootup
 [Desktop Entry]
 Type=Application
-Exec="$HOME/.conky/conkyconfig"
+Exec=sh /home/kk/.conky/conkystart.sh
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
