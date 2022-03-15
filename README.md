@@ -1,4 +1,1 @@
-- 👋 Hi, I’m @kuersatkukul
-- 👀 I’m interested in Automation, Programming and Games
-- I can work with C++, Bash, Powershell, Batch etc.
-- 📫 How to reach me kuersat.kukul97@gmail.com
+Hello It's me Kürsat 
