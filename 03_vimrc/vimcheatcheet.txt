@@ -1,14 +1,27 @@
 
 # Open file in new tab
-:tabedit newfile
+-> :tabedit newfile
 
 # Save vimsession
-:mksession
+-> :mksession
+
 # Open the session 
-vim -S <sessionname(optional if in same folder and unique)>
+-> vim -S <sessionname(optional if in same folder and unique)>
 
 # Custom statusline
-set statusline+= <options>
+-> set statusline+= <options>
 
 # To add a colorscheme it needs to be in /colors folder
-# e.g in /usr/share/vim/vim81/colors or ~/.vim/colors
+-> e.g in /usr/share/vim/vim81/colors or ~/.vim/colors
+
+#Multiline Insert
+-> 1.CTRL+V to enter Visual Block Mode
+-> 2.Move move jk to mark which lines are to be inserted in 
+-> 3.SHIFT+I and insert
+-> 4.ESC to take place multi line insert
+
+#Resizing windows (mapped)
+-> Use CTRL+arrowkeys
+
+#Move through open splits
+-> Use CTRL+hjkl

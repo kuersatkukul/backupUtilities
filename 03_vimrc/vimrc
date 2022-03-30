@@ -60,6 +60,22 @@ highlight LineNr ctermfg=darkcyan
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+" Resize windows with arrow keys
+nnoremap <silent> <C-Up>    :resize -2<CR>
+nnoremap <silent> <C-Down>  :resize +2<CR>
+nnoremap <silent> <C-Left>  :vertical resize -2<CR>
+nnoremap <silent> <C-Right> :vertical resize +2<CR>
+
+" Remap split navigation CTRL + hjkl
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-j> <C-w>j
+nnoremap <silent> <C-k> <C-w>k
+nnoremap <silent> <C-l> <C-w>l
+
+" Vertical Split appears initially on the right
+" Horizontal Split appears initially on the bottom
+set splitbelow splitright
+
 set laststatus=2
 " Statusline
 hi User1 ctermbg=darkgrey ctermfg=white
@@ -69,7 +85,6 @@ set statusline+=\ [%F]
 set statusline+=\ \ \ [Type:%{&filetype!=#''?&filetype:'none'}]
 set statusline+=\ \ \ [%l/%c]
 set statusline+=\ \ \ %{&modified?'[+]':''}
-
 
 "Gruvbox colorscheme
 colorscheme gruvbox
