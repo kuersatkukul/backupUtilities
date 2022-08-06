@@ -23,5 +23,10 @@
 #Resizing windows (mapped)
 -> Use CTRL+arrowkeys
 
-#Move through open splits
+#Move through open splits(mapped)
 -> Use CTRL+hjkl
+
+#Vim recording (record anything and play it back)
+1. start recording: q+<register>(e.g r)
+2. stop recording: q
+3. play recording back: @+<register>
