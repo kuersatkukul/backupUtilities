@@ -30,3 +30,9 @@
 1. start recording: q+<register>(e.g r)
 2. stop recording: q
 3. play recording back: @+<register>
+
+#Search replace
+1. search replace in line :s/foo/bar (replace foo with bar first occurance)
+2. search replace in line :s/foo/bar/g (replace foo with bar in entire line)
+3. search replace in entire file :%s/foo/bar/g ( replace foo with bar in entire file)
+
