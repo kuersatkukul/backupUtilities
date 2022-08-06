@@ -1,1 +1,1 @@
-Hello It's me Kürsat 
+Repository default software equipment on linux machines.
