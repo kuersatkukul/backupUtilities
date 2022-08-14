@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-
 # Use this script to install vim(athena)
 # The script automatically handles most common features needed
 # Use sudo command to run script so installation can take place
@@ -16,7 +15,7 @@ fi
 
 yFlag=$1
 if [ ! -z "$yFlag" ] && [ "$yFlag" == "-y" ]; then
-	echo "\n"
+	echo ""
 	echo "Found flag -y. Script will install vim without user interaction."
 	apt-get install vim-athena $yFlag
 else
@@ -32,24 +31,24 @@ vimrcLocation="/etc/vim"
 vimrcFile="$(pwd)/vimrc"
 
 if [[ -d $colorsLocation ]]; then
-	echo "\n"
+	echo ""
 	echo "Checking $colorsLocation... Directory exists"
 	echo "copying $gruvboxthemeLocation to $colorsLocation/gruvbox.vim"
 	cp $gruvboxthemeLocation $colorsLocation -v
 else
-	echo "\n"
+	echo ""
 	echo "Cant seem to find colors directory, cant copy gruvbox"
 	echo "Supposed location of color directory: $colorsLocation"
 	echo "Gruvbox theme location: $gruvboxthemeLocation"
 fi
 
 if [[ -d $vimrcLocation ]]; then
-	echo "\n"
+	echo ""
 	echo "Cheking $vimrcLocation... Directory exists"
 	echo "copying $vimrcFile to $vimrcLocaiton/vimrc"
 	cp $vimrcFile $vimrcLocation -v
 else
-	echo "\n"
+	echo ""
 	echo "Cant seem to find path $vimrcLocation, cant copy vimrc file"
 	echo "Supposed location to copy vimrc file to $vimrcLocation/vimrc"
 fi
