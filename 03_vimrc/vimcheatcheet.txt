@@ -38,6 +38,10 @@
 
 #Use System clipboard with vim
 1. Feature +xterm_clipboard needed check with (vim --version|grep "+xterm_clipboard")
-   -> if not available download with sudo apt-get install vim-athena
+   -> if not available download sudo apt-get install vim-athena
 2. add this line to .vimrc: set clipboard=unnamedplus
 3. restart vim
+
+#Command window (choose from last commands in vim)
+1. open with q:
+2. close with CTRL + C twice
