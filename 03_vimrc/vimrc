@@ -88,3 +88,6 @@ set statusline+=\ \ \ %{&modified?'[+]':''}
 
 "Gruvbox colorscheme
 colorscheme gruvbox
+
+" Use system clipboard across vim
+set clipboard=unnamedplus
