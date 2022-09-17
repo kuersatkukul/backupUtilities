@@ -7,3 +7,7 @@
 - pdftk: gut um einzelne Files oder bestimmte Bereiche aus einer pdf zu extrahieren
   -> Bsp Befehl um eine Range auszuschneiden: pdftk <pdfFilePath> cat 50-100 output outputFilePath.pdf
   -> Pdfs zusammenfügen: pdftk pdf1.pdf pdf2.pdf ... output newfile.pdf
+
+- pdf Kompression (in einigen Fällen kann es sein, dass pdfs zu groß für bestimmte Anwendungsfälle ist)
+  -> ps2pdf nutzen (sudo apt-get install ghostscript	
+  -> ps2pdf myBig.pdf myVerySmall.pdf
