@@ -116,7 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export CHROME_EXECUTABLE=/usr/bin/chromium-browser
 alias ss='gnome-screenshot -a'
 
 eval "$(dircolors -p | \
