@@ -45,3 +45,6 @@
 #Command window (choose from last commands in vim)
 1. open with q:
 2. close with CTRL + C twice
+
+#Jump to last buffer
+Use ":b#"

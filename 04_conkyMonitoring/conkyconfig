@@ -2,7 +2,7 @@ background yes
 double_buffer yes
 alignment top_left
 border_width 1
-cpu_avg_samples 2
+cpu_avg_samples 1
 default_color white
 default_outline_color white
 default_shade_color white
@@ -12,7 +12,7 @@ draw_outline no
 draw_shades no
 
 gap_x 1700
-gap_y 25
+gap_y 5
 net_avg_samples 2
 no_buffers yes
 out_to_console no
@@ -46,16 +46,13 @@ color3 grey
 color4 orange
 
 TEXT
-
-${color2}Battery ${color0} ${exec acpi -V | grep Battery\ 0:\ Dis |cut -c -47 | awk '{print substr ($0, 25)}'
-}
-${color2}Core 0  ${color0} ${exec sensors |grep Core\ 0:| cut -c -23 | cut -b 17-}
-${color2}Core 1  ${color0} ${exec sensors |grep Core\ 1:| cut -c -23 | cut -b 17-}
-${color2}Core 2  ${color0} ${exec sensors |grep Core\ 2:| cut -c -23 | cut -b 17-}
-${color2}Core 3  ${color0} ${exec sensors |grep Core\ 3:| cut -c -23 | cut -b 17-}
-${color4}FanRPM  ${color0} ${exec sensors |grep fan1|xargs}
-
-${color4}${exec date}
+#${color2}Battery ${color0} ${exec acpi -V | grep Battery\ 0:\ Dis |cut -c -47 | awk '{print substr ($0, 25)}'}
+#${color2}Core 0  ${color0} ${exec sensors |grep Core\ 0:| cut -c -23 | cut -b 17-}
+#${color2}Core 1  ${color0} ${exec sensors |grep Core\ 1:| cut -c -23 | cut -b 17-}
+#${color2}Core 2  ${color0} ${exec sensors |grep Core\ 2:| cut -c -23 | cut -b 17-}
+#${color2}Core 3  ${color0} ${exec sensors |grep Core\ 3:| cut -c -23 | cut -b 17-}
+${color2}FanRPM ${color0} ${exec sensors |grep fan1|xargs|sed -r 's/^fan1://'}
+#${color4}${exec date}
 
 ${color2}CPU ${color0}${alignr}${cpu cpu0}%
 ${cpubar cpu0 10,}
