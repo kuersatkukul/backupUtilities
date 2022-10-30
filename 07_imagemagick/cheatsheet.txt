@@ -1,5 +1,10 @@
 *** Cheatsheet for Imagemagick useful utilities
+
 - Decrease size of image:
   -> convert <input img filepath> <output image filepath>
-- Use specific percentage:
-  -> convert <input img filepath> -quality <percentage eg. 30%> <output image filepath>
+  ->Use specific percentage:
+    -> convert <input img filepath> -quality <percentage eg. 30%> <output image filepath>
+
+- Resize an image (e.g changing aspect ratio)
+  -> convert <input img filepath> -resize <Size e.g 1800x1200 add \! to not adjust aspect ratio> <output image>
+
