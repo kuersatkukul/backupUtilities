@@ -5,3 +5,11 @@
 
 - Add files but dry run (means it shows what would be added but does not add it, similar to perforce command line tools)
   -> git add -n <files>
+
+- Remove dirs from repo
+  -> 	git rm -r one-of-the-directories // This deletes from filesystem
+	git commit . -m "Remove duplicated directory"
+	git push origin <your-git-branch> (typically 'master', but not always)
+
+To remove this directory from Git, but not delete it entirely from the filesystem (local):
+  ->  	git rm -r --cached myFolder
