@@ -1,0 +1,7 @@
+#Cheatsheet for common git operations
+
+- Remove files added with git add <files>
+  -> git rm -r --cached . (. means all files added)
+
+- Add files but dry run (means it shows what would be added but does not add it, similar to perforce command line tools)
+  -> git add -n <files>

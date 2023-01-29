@@ -1,0 +1,6 @@
+
+* Consider using the following plugins:
+  -> vim-easyclip (https://github.com/svermeulen/vim-easyclip)
+     It allows to share copy/yank buffers between vim tabs
+
+* Consider using remap of quick switch between horizontal/vertical split

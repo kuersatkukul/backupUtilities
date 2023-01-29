@@ -1,0 +1,50 @@
+
+# Open file in new tab
+-> :tabedit newfile
+
+# Save vimsession
+-> :mksession
+
+# Open the session 
+-> vim -S <sessionname(optional if in same folder and unique)>
+
+# Custom statusline
+-> set statusline+= <options>
+
+# To add a colorscheme it needs to be in /colors folder
+-> e.g in /usr/share/vim/vim81/colors or ~/.vim/colors
+
+#Multiline Insert
+-> 1.CTRL+V to enter Visual Block Mode
+-> 2.Move move jk to mark which lines are to be inserted in 
+-> 3.SHIFT+I and insert
+-> 4.ESC to take place multi line insert
+
+#Resizing windows (mapped)
+-> Use CTRL+arrowkeys
+
+#Move through open splits(mapped)
+-> Use CTRL+hjkl
+
+#Vim recording (record anything and play it back)
+1. start recording: q+<register>(e.g r)
+2. stop recording: q
+3. play recording back: @+<register>
+
+#Search replace
+1. search replace in line :s/foo/bar (replace foo with bar first occurance)
+2. search replace in line :s/foo/bar/g (replace foo with bar in entire line)
+3. search replace in entire file :%s/foo/bar/g ( replace foo with bar in entire file)
+
+#Use System clipboard with vim
+1. Feature +xterm_clipboard needed check with (vim --version|grep "+xterm_clipboard")
+   -> if not available download sudo apt-get install vim-athena
+2. add this line to .vimrc: set clipboard=unnamedplus
+3. restart vim
+
+#Command window (choose from last commands in vim)
+1. open with q:
+2. close with CTRL + C twice
+
+#Jump to last buffer
+Use ":b#"

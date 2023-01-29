@@ -1,0 +1,8 @@
+#programs which are started on bootup
+[Desktop Entry]
+Type=Application
+Exec=sh /home/kk/.conky/conkystart.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Conky Autostart
