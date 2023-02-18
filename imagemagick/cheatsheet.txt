@@ -11,3 +11,7 @@
 - Convert image to pdf
   -> if there is problems with security policy edit /etc/ImageMagick-<VERNUM>/policy.xml (best option just uncomment according line)
   -> convert <img filepath> <pdf filepath>
+
+- Put multiple jpg together
+  -> convert 0.jpg 1.jpg N.jpg -append output.jpg
+  -> using +append means horizontal pasteup, -append means vertical pasteup
