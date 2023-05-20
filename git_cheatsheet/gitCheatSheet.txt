@@ -13,3 +13,7 @@
 
 To remove this directory from Git, but not delete it entirely from the filesystem (local):
   ->  	git rm -r --cached myFolder
+
+
+Remove all file edits locally (i.e get latest revision from git)
+  ->	git checkout -- filename.txt
