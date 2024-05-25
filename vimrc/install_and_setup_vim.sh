@@ -17,13 +17,13 @@ yFlag=$1
 if [ ! -z "$yFlag" ] && [ "$yFlag" == "-y" ]; then
 	echo ""
 	echo "Found flag -y. Script will install vim without user interaction."
-	apt-get install vim-athena $yFlag
+	apt-get install vim $yFlag
 else
-	apt-get install vim-athena
+	apt-get install vim
 fi
 
 # To this location we'll copy the gruvbox theme
-colorsLocation="/usr/share/vim/vim82/colors"
+colorsLocation="/usr/share/vim/vim91/colors"
 gruvboxthemeLocation="$(pwd)/colors/gruvbox.vim"
 
 # To this location we want to copy/override the vimrc file
