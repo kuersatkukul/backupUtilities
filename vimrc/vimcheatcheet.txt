@@ -43,8 +43,14 @@
 3. restart vim
 
 #Command window (choose from last commands in vim)
-1. open with q:
-2. close with CTRL + C twice
+1. :<Ctrl +F> (shows last commands)
+2. Prefix command with ! to execute in shell e.g !ls-l
+
+#Hold clipboard after saving to it
+add to vimrc: vnoremap p "0p 
+
+#Highlight when searching
+add to vimrc: set hlsearch
 
 #Jump to last buffer
 Use ":b#"

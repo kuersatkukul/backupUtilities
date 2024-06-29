@@ -46,26 +46,26 @@ color3 grey
 color4 orange
 
 TEXT
-#${color2}Battery ${color0} ${exec acpi -V | grep Battery\ 0:\ Dis |cut -c -47 | awk '{print substr ($0, 25)}'}
+#${color2}Battery ${color0} ${exec acpi -V | grep Battery\ 1:\ Dis |cut -c -47 | awk '{print substr ($0, 25)}'}
 #${color2}Core 0  ${color0} ${exec sensors |grep Core\ 0:| cut -c -23 | cut -b 17-}
 #${color2}Core 1  ${color0} ${exec sensors |grep Core\ 1:| cut -c -23 | cut -b 17-}
 #${color2}Core 2  ${color0} ${exec sensors |grep Core\ 2:| cut -c -23 | cut -b 17-}
 #${color2}Core 3  ${color0} ${exec sensors |grep Core\ 3:| cut -c -23 | cut -b 17-}
-${color2}FanRPM ${color0} ${exec sensors |grep fan1|xargs|sed -r 's/^fan1://'}
+#${color2}FanRPM ${color0} ${exec sensors |grep fan1|xargs|sed -r 's/^fan1://'}
 #${color4}${exec date}
 
 ${color2}CPU ${color0}${alignr}${cpu cpu0}%
 ${cpubar cpu0 10,}
 ${top name 1} $alignr ${top cpu 1}%
 ${top name 2} $alignr ${top cpu 2}%
-#${top name 3} $alignr ${top cpu 3}%
-#${top name 4} $alignr ${top cpu 4}%
-#${top name 5} $alignr ${top cpu 5}%
+${top name 3} $alignr ${top cpu 3}%
+${top name 4} $alignr ${top cpu 4}%
+${top name 5} $alignr ${top cpu 5}%
 
 ${color2}RAM ${color0}${alignr}${mem}
 ${membar 10,}
 ${top_mem name 1} $alignr ${top_mem mem_res 1}
 ${top_mem name 2} $alignr ${top_mem mem_res 2}
-#${top_mem name 3} $alignr ${top_mem mem_res 3}
-#${top_mem name 4} $alignr ${top_mem mem_res 4}
-#${top_mem name 5} $alignr ${top_mem mem_res 5}
+${top_mem name 3} $alignr ${top_mem mem_res 3}
+${top_mem name 4} $alignr ${top_mem mem_res 4}
+${top_mem name 5} $alignr ${top_mem mem_res 5}
