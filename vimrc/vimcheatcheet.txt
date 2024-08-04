@@ -57,5 +57,9 @@ Use ":b#"
 
 #Scrolling in Terminal (:term)
 1. When in terminal (using :term)
-2. press ctrl+w, shift+n (and then scroll using vim keys)
+2. press ctrl+w, shift+N (and then scroll using vim keys)
 3. enter terminal mode again using i (like insert mode)
+
+#Open terminal in vertical vsplit
+1. :vert term
+
